@@ -1,0 +1,67 @@
+.menu {
+    width: 800px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    list-style-type: none;
+    position: absolute;
+    top: 0;
+    left: -300px;
+    width: 250px;
+    height: 100vh;
+    background-color: #eee;
+    padding: 0;
+    transition: 0.3s;
+    margin: unset;
+}
+li {
+    padding: 10px 0;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+.nav-links.active {
+    left: 0;
+}
+
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    z-index: 1001;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-btn .line {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    transition: all 0.3s;
+}
+
+
+.menu-btn.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    top: 10px;
+}
+
+.menu-btn.toggle .line2 {
+    opacity: 0;
+}
+
+.menu-btn.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    bottom: 10px;
+}
